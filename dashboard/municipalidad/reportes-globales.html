@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reportes Globales | Dashboard Municipalidad</title>
+
+  <link rel="stylesheet" href="/dashboard/municipalidad/reportes-globales.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="shortcut icon" href="/img/logo-icon.png">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="dashboard-navbar">
+    <div class="nav-left">
+      <img src="/img/dashboard-logo-puntos-verdes.png" alt="Logo Puntos Verdes" class="logo-img">
+      <h1>Dashboard Municipalidad</h1>
+    </div>
+    <nav class="nav-center">
+      <ul>
+        <li><a href="/dashboard/municipalidad/inicio.html">Inicio</a></li>
+        <li><a href="/dashboard/municipalidad/reportes-globales.html" class="active">Reportes Globales</a></li>
+        <li><a href="/dashboard/municipalidad/estadisticas-distrito.html">Estadísticas por Distrito</a></li>
+        <li><a href="/dashboard/municipalidad/gestion-campanias.html">Gestión de Campañas</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <div class="user-menu">
+        <img src="/img/foto-perfil.jpeg" alt="Usuario" class="user-avatar">
+        <span>Municipalidad Lima</span>
+        <a href="logout.html" class="logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Layout -->
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3 class="sidebar-title">Opciones</h3>
+      <ul class="sidebar-menu">
+        <li><a href="/dashboard/municipalidad/aside/perfil.html"><i class="fa-solid fa-id-card"></i> Perfil</a></li>
+        <li><a href="/dashboard/municipalidad/aside/usuarios.html"><i class="fa-solid fa-users"></i> Usuarios</a></li>
+        <li><a href="/dashboard/municipalidad/aside/puntos-verdes.html"><i class="fa-solid fa-seedling"></i> Puntos Verdes</a></li>
+        <li><a href="/dashboard/municipalidad/aside/ayuda.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a></li>
+        <li><a href="/dashboard/municipalidad/aside/acercade.html"><i class="fa-solid fa-leaf"></i> Acerca de</a></li>
+      </ul>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="dashboard-content">
+      <div class="dashboard-header">
+        <h2>Reportes Globales de Reciclaje</h2>
+        <p>Consulta la información consolidada de los residuos recolectados, puntos verdes y usuarios activos.</p>
+      </div>
+
+      <!-- Tarjetas resumen -->
+      <div class="cards-grid">
+        <div class="card">
+          <i class="fa-solid fa-boxes-packing"></i>
+          <h3>Total Residuos Recolectados</h3>
+          <p>8,540 kg</p>
+        </div>
+
+        <div class="card">
+          <i class="fa-solid fa-seedling"></i>
+          <h3>Total Puntos Verdes</h3>
+          <p>1,230 puntos</p>
+        </div>
+
+        <div class="card">
+          <i class="fa-solid fa-users"></i>
+          <h3>Recolectores Activos</h3>
+          <p>58 usuarios</p>
+        </div>
+
+        <div class="card">
+          <i class="fa-solid fa-chart-pie"></i>
+          <h3>Campañas en Curso</h3>
+          <p>3 campañas activas</p>
+        </div>
+      </div>
+
+      <!-- Gráficos (placeholders) -->
+      <div class="charts-grid">
+        <div class="chart-card">
+          <h3>Distribución por Tipo de Residuo</h3>
+          <div class="chart-placeholder">[Gráfico circular aquí]</div>
+        </div>
+        <div class="chart-card">
+          <h3>Residuos por Distrito</h3>
+          <div class="chart-placeholder">[Gráfico de barras aquí]</div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Plataforma de Reciclaje y Puntos Verdes | Proyecto académico - Certus</p>
+  </footer>
+</body>
+</html>

@@ -35,6 +35,7 @@ body {
   font-weight: 600;
 }
 
+/* Navbar links con separadores */
 .dashboard-navbar ul {
   list-style: none;
   display: flex;
@@ -60,11 +61,11 @@ body {
 }
 
 .dashboard-navbar ul li a {
+  position: relative;
   color: #fff;
   font-weight: 500;
   text-decoration: none;
   padding-bottom: 4px;
-  position: relative;
   transition: color 0.3s;
 }
 
@@ -173,7 +174,8 @@ body {
   transition: all 0.3s ease;
 }
 
-.sidebar-menu li a:hover {
+.sidebar-menu li a:hover,
+.sidebar-menu li a.active {
   background: #f5f9f2;
   color: #004080;
   border-left: 4px solid #8ab900;
@@ -184,21 +186,22 @@ body {
   padding: 2rem;
 }
 
-.content-header h2 {
+.dashboard-content h2 {
   color: #004080;
   margin-bottom: 0.5rem;
 }
 
-.content-header p {
+.dashboard-content p {
   color: #555;
   margin-bottom: 2rem;
 }
 
-/* ====== CARDS ====== */
+/* ====== TARJETAS ====== */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .card {
@@ -214,14 +217,14 @@ body {
   transform: translateY(-5px);
 }
 
-.card i.fa-triangle-exclamation {
+.card i {
   font-size: 2rem;
   color: #8ab900;
   margin-bottom: 0.8rem;
 }
 
 .card h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   color: #003366;
   margin-bottom: 0.3rem;
 }
@@ -231,31 +234,52 @@ body {
   color: #555;
 }
 
-/* ====== BOTONES ====== */
-.btn-editar {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  justify-content: center;
-  padding: 0.6rem 1.2rem;
+.card .btn-cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
   border-radius: 30px;
   background: #004080;
   color: #fff;
   font-weight: 600;
-  font-size: 0.95rem;
-  border: none;
-  cursor: pointer;
-  transition: background 0.3s;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s;
 }
 
-.btn-editar:hover {
+.card .btn-cta:hover {
   background: #003366;
+  color: #fff;
 }
 
-.btn-editar i {
-  font-size: 0.95rem; /* igual que el texto */
-  color: #fff;
-  line-height: 1;
+/* ====== GRÁFICOS ====== */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.chart-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.chart-card h3 {
+  font-size: 1.1rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.chart-placeholder {
+  height: 250px;
+  background: #f0f0f0;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-style: italic;
 }
 
 /* ====== FOOTER ====== */
