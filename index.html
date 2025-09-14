@@ -2,30 +2,33 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>ReciGO | Inicio</title>
-    
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet"/>
-    
-    <!-- Links to pre-connect to Google Fonts servers and upload the font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-    
-    <link rel="shortcut icon" href="img/logo-icon.png">
-    
-    <!-- Meta tag for page description -->
-    <meta name="description" content="Website description.">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Puntos Verdes | Inicio</title>
+
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="shortcut icon" href="img/logo-icon.png">
+  <meta name="description" content="Website description.">
 </head>
 
 <body>
-<!-- Navbar -->
+  <!-- Navbar -->
   <header class="navbar">
     <div class="nav-left">
       <a href="#inicio">
@@ -35,35 +38,45 @@
     <div class="nav-center">
       <nav>
         <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a href="#usuarios">Usuarios</a></li>
-          <li><a href="#estadisticas">Estadísticas</a></li>
-          <li><a href="#recompensas">Recompensas</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="/views/servicios.html">Servicios</a></li>
+          <li><a href="/views/usuarios.html">Usuarios</a></li>
+          <li><a href="/views/estadisticas">Estadísticas</a></li>
+          <li><a href="/views/recompensas">Recompensas</a></li>
         </ul>
       </nav>
     </div>
     <div class="nav-right">
-      <a href="#contacto" class="btn-nav">Contacto</a>
-      <a href="login.html" class="btn-nav">Login</a>
+      <a href="#contacto" class="btn-nav"><i class="fa-solid fa-envelope"></i> Contacto</a>
+      <a href="login.html" class="btn-nav"><i class="fa-solid fa-user"></i> Login</a>
     </div>
-    <div class="menu-toggle">&#9776;</div>
+    <div class="menu-toggle"><i class="fa-solid fa-bars"></i></div>
   </header>
 
-  <!-- Hero Banner -->
+  <!-- Hero con video -->
   <section id="inicio" class="hero">
+    <!-- Video de fondo -->
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="/img/banner-video.mp4" type="video/mp4">
+      Tu navegador no soporta videos HTML5.
+    </video>
+
+    <!-- Overlay oscuro -->
+    <div class="overlay"></div>
+
+    <!-- Contenido -->
     <div class="hero-content">
       <div class="hero-left">
         <h1>La plataforma que te recompensa por reciclar</h1>
-        <p>Únete a <strong>Puntos Verdes</strong> y ayuda al medio ambiente mientras acumulas beneficios entregando tus residuos en puntos verdes cercanos.</p>
+        <p>Únete a <strong>Puntos Verdes</strong> y ayuda al medio ambiente mientras acumulas beneficios
+          entregando tus residuos en puntos verdes cercanos.</p>
         <div class="hero-buttons">
           <a href="registro.html" class="btn-cta">Comenzar ahora</a>
           <a href="#servicios" class="btn-sec">Conoce más</a>
         </div>
       </div>
-      <div class="hero-right">
-        <img src="/img/phone-banner.png" alt="App Puntos Verdes">
-      </div>
+      <!-- div vacío para balancear espacio como antes -->
+      <div class="hero-right"></div>
     </div>
   </section>
 
@@ -76,6 +89,17 @@
     <p>&copy; 2025 Plataforma de Reciclaje y Puntos Verdes | Proyecto académico - Certus</p>
   </footer>
 
+  <!-- Script menú responsive -->
+  <script>
+    const toggle = document.querySelector('.menu-toggle');
+    const navCenter = document.querySelector('.nav-center ul');
+    const navRight = document.querySelector('.nav-right');
+
+    toggle.addEventListener('click', () => {
+      navCenter.classList.toggle('show');
+      navRight.classList.toggle('show');
+    });
+  </script>
 </body>
 
 </html>
