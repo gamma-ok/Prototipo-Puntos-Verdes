@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Puntos Verdes | Inicio</title>
+  <title>Puntos Verdes | Canje de Recompensas</title>
 
-  <link rel="stylesheet" href="/dashboard/ciudadano/inicio.css">
+  <link rel="stylesheet" href="/dashboard/ciudadano/canje.css">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -30,10 +30,10 @@
     </div>
     <nav class="nav-center">
       <ul>
-        <li><a href="/dashboard/ciudadano/inicio.html" class="active">Inicio</a></li>
-        <li><a href="/dashboard/ciudadano/historial.html">Historial</a></li>
-        <li><a href="/dashboard/ciudadano/canje.html">Canje</a></li>
-        <li><a href="/dashboard/ciudadano/estadisticas.html">Estadísticas</a></li>
+        <li><a href="dashboard-ciudadano.html">Inicio</a></li>
+        <li><a href="historial.html">Historial</a></li>
+        <li><a href="canje.html" class="active">Canje</a></li>
+        <li><a href="estadisticas.html">Estadísticas</a></li>
       </ul>
     </nav>
     <div class="nav-right">
@@ -45,7 +45,7 @@
     </div>
   </header>
 
-  <!-- Layout con aside -->
+  <!-- Layout -->
   <div class="dashboard-layout">
     <!-- Aside -->
     <aside class="sidebar">
@@ -61,32 +61,49 @@
 
     <!-- Contenido principal -->
     <main class="dashboard-content">
-      <h2>Bienvenido, Juan</h2>
-      <p>Este es tu panel personal, donde puedes ver tu impacto y administrar tu actividad de reciclaje.</p>
+      <h2>Canje de Recompensas</h2>
+      <p>Elige entre las recompensas disponibles y canjea tus puntos acumulados.</p>
 
-      <div class="cards-grid">
-        <div class="card">
-          <i class="fa-solid fa-coins"></i>
-          <h3>350 Puntos</h3>
-          <p>Acumulados hasta la fecha</p>
+      <!-- Recompensas -->
+      <div class="rewards-grid">
+        <div class="reward-card">
+          <img src="/img/cupon.png" alt="Cupón de Descuento">
+          <h3>Cupón de Descuento</h3>
+          <p>Obtén un 10% de descuento en tiendas asociadas.</p>
+          <div class="reward-footer">
+            <span class="points">100 pts</span>
+            <button class="btn-canje">Canjear</button>
+          </div>
         </div>
 
-        <div class="card">
-          <i class="fa-solid fa-boxes-packing"></i>
-          <h3>Última entrega</h3>
-          <p>Plásticos - 5kg (12/09/2025)</p>
+        <div class="reward-card">
+          <img src="/img/giftcard.png" alt="Gift Card">
+          <h3>Gift Card</h3>
+          <p>Recibe una tarjeta de regalo de S/ 20.</p>
+          <div class="reward-footer">
+            <span class="points">200 pts</span>
+            <button class="btn-canje">Canjear</button>
+          </div>
         </div>
 
-        <div class="card">
-          <i class="fa-solid fa-seedling"></i>
-          <h3>Impacto Ambiental</h3>
-          <p>Has reducido 15kg de CO₂</p>
+        <div class="reward-card">
+          <img src="/img/mochila.png" alt="Mochila ecológica">
+          <h3>Mochila Ecológica</h3>
+          <p>Fabricada con materiales reciclados.</p>
+          <div class="reward-footer">
+            <span class="points">250 pts</span>
+            <button class="btn-canje">Canjear</button>
+          </div>
         </div>
 
-        <div class="card">
-          <i class="fa-solid fa-gift"></i>
-          <h3>Canjear Recompensas</h3>
-          <a href="canje.html" class="btn-cta">Canjear ahora</a>
+        <div class="reward-card">
+          <img src="/img/planta.png" alt="Planta ornamental">
+          <h3>Planta Ornamental</h3>
+          <p>Lleva a casa una planta y ayuda al planeta.</p>
+          <div class="reward-footer">
+            <span class="points">150 pts</span>
+            <button class="btn-canje">Canjear</button>
+          </div>
         </div>
       </div>
     </main>

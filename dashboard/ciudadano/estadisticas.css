@@ -1,4 +1,4 @@
-/* ====== LAYOUT GENERAL ====== */
+/* ====== BASE ====== */
 body {
   font-family: 'Roboto', sans-serif;
   background: #f8f9fa;
@@ -6,7 +6,7 @@ body {
   color: #333;
 }
 
-/* ====== NAVBAR DASHBOARD ====== */
+/* ====== NAVBAR ====== */
 .dashboard-navbar {
   background: #004080;
   color: #fff;
@@ -69,7 +69,6 @@ body {
   transition: color 0.3s;
 }
 
-/* Línea animada debajo de todas las categorías */
 .dashboard-navbar ul li a::after {
   content: "";
   position: absolute;
@@ -85,12 +84,10 @@ body {
   width: 100%;
 }
 
-/* Hover texto */
 .dashboard-navbar ul li a:hover {
   color: #8ab900;
 }
 
-/* Activo se mantiene blanco */
 .dashboard-navbar ul li a.active {
   color: #fff;
   font-weight: 600;
@@ -199,11 +196,12 @@ body {
   margin-bottom: 2rem;
 }
 
-/* ====== CARDS ====== */
+/* ====== CARDS RESUMEN ====== */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .card {
@@ -236,21 +234,42 @@ body {
   color: #555;
 }
 
-.card .btn-cta {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.7rem 1.5rem;
-  border-radius: 30px;
-  background: #004080;
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s, color 0.3s;
+/* ====== CHARTS ====== */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
 }
 
-.card .btn-cta:hover {
-  background: #003366;
-  color: #fff;
+.chart-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.chart-card h3 {
+  color: #004080;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.chart-placeholder {
+  height: 250px;
+  background: repeating-linear-gradient(
+    45deg,
+    #f3f3f3,
+    #f3f3f3 10px,
+    #e0e0e0 10px,
+    #e0e0e0 20px
+  );
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #777;
+  font-size: 0.95rem;
+  font-style: italic;
 }
 
 /* ====== FOOTER ====== */

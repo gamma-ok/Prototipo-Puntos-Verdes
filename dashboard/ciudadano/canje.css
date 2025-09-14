@@ -1,4 +1,4 @@
-/* ====== LAYOUT GENERAL ====== */
+/* ====== BASE ====== */
 body {
   font-family: 'Roboto', sans-serif;
   background: #f8f9fa;
@@ -6,7 +6,7 @@ body {
   color: #333;
 }
 
-/* ====== NAVBAR DASHBOARD ====== */
+/* ====== NAVBAR ====== */
 .dashboard-navbar {
   background: #004080;
   color: #fff;
@@ -69,7 +69,6 @@ body {
   transition: color 0.3s;
 }
 
-/* Línea animada debajo de todas las categorías */
 .dashboard-navbar ul li a::after {
   content: "";
   position: absolute;
@@ -85,12 +84,10 @@ body {
   width: 100%;
 }
 
-/* Hover texto */
 .dashboard-navbar ul li a:hover {
   color: #8ab900;
 }
 
-/* Activo se mantiene blanco */
 .dashboard-navbar ul li a.active {
   color: #fff;
   font-weight: 600;
@@ -199,58 +196,76 @@ body {
   margin-bottom: 2rem;
 }
 
-/* ====== CARDS ====== */
-.cards-grid {
+/* ====== RECOMPENSAS ====== */
+.rewards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1.5rem;
 }
 
-.card {
+.reward-card {
   background: #fff;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 14px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.08);
   text-align: center;
   transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.reward-card:hover {
+  transform: translateY(-6px);
 }
 
-.card i {
-  font-size: 2rem;
-  color: #8ab900;
-  margin-bottom: 0.8rem;
+.reward-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 1rem;
 }
 
-.card h3 {
-  font-size: 1.3rem;
+.reward-card h3 {
+  font-size: 1.2rem;
   color: #003366;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 }
 
-.card p {
+.reward-card p {
   font-size: 0.95rem;
   color: #555;
+  margin-bottom: 1.2rem;
 }
 
-.card .btn-cta {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.7rem 1.5rem;
-  border-radius: 30px;
+.reward-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.reward-footer .points {
+  font-weight: 600;
+  color: #8ab900;
+  font-size: 1rem;
+}
+
+.reward-footer .btn-canje {
   background: #004080;
   color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 25px;
   font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s, color 0.3s;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+  max-width: 160px;
 }
 
-.card .btn-cta:hover {
-  background: #003366;
-  color: #fff;
+.reward-footer .btn-canje:hover {
+  background: #002d66;
 }
 
 /* ====== FOOTER ====== */

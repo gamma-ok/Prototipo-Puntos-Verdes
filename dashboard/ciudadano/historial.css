@@ -1,4 +1,4 @@
-/* ====== LAYOUT GENERAL ====== */
+/* ====== BASE ====== */
 body {
   font-family: 'Roboto', sans-serif;
   background: #f8f9fa;
@@ -6,7 +6,7 @@ body {
   color: #333;
 }
 
-/* ====== NAVBAR DASHBOARD ====== */
+/* ====== NAVBAR ====== */
 .dashboard-navbar {
   background: #004080;
   color: #fff;
@@ -69,7 +69,6 @@ body {
   transition: color 0.3s;
 }
 
-/* Línea animada debajo de todas las categorías */
 .dashboard-navbar ul li a::after {
   content: "";
   position: absolute;
@@ -85,12 +84,10 @@ body {
   width: 100%;
 }
 
-/* Hover texto */
 .dashboard-navbar ul li a:hover {
   color: #8ab900;
 }
 
-/* Activo se mantiene blanco */
 .dashboard-navbar ul li a.active {
   color: #fff;
   font-weight: 600;
@@ -199,58 +196,38 @@ body {
   margin-bottom: 2rem;
 }
 
-/* ====== CARDS ====== */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-}
-
-.card {
+/* ====== TABLA ====== */
+.table-container {
+  overflow-x: auto;
   background: #fff;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 14px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-  text-align: center;
-  transition: transform 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card i {
-  font-size: 2rem;
-  color: #8ab900;
-  margin-bottom: 0.8rem;
-}
-
-.card h3 {
-  font-size: 1.3rem;
-  color: #003366;
-  margin-bottom: 0.3rem;
-}
-
-.card p {
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
   font-size: 0.95rem;
-  color: #555;
 }
 
-.card .btn-cta {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.7rem 1.5rem;
-  border-radius: 30px;
+.history-table thead {
   background: #004080;
   color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s, color 0.3s;
 }
 
-.card .btn-cta:hover {
-  background: #003366;
-  color: #fff;
+.history-table th,
+.history-table td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+}
+
+.history-table tbody tr:nth-child(even) {
+  background: #f5f9f9;
+}
+
+.history-table tbody tr:hover {
+  background: #eaf3ea;
 }
 
 /* ====== FOOTER ====== */

@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Puntos Verdes | Inicio</title>
+  <title>Puntos Verdes | Estadísticas</title>
 
-  <link rel="stylesheet" href="/dashboard/ciudadano/inicio.css">
+  <link rel="stylesheet" href="/dashboard/ciudadano/estadisticas.css">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -30,10 +30,10 @@
     </div>
     <nav class="nav-center">
       <ul>
-        <li><a href="/dashboard/ciudadano/inicio.html" class="active">Inicio</a></li>
-        <li><a href="/dashboard/ciudadano/historial.html">Historial</a></li>
-        <li><a href="/dashboard/ciudadano/canje.html">Canje</a></li>
-        <li><a href="/dashboard/ciudadano/estadisticas.html">Estadísticas</a></li>
+        <li><a href="dashboard-ciudadano.html">Inicio</a></li>
+        <li><a href="historial.html">Historial</a></li>
+        <li><a href="canje.html">Canje</a></li>
+        <li><a href="estadisticas.html" class="active">Estadísticas</a></li>
       </ul>
     </nav>
     <div class="nav-right">
@@ -45,7 +45,7 @@
     </div>
   </header>
 
-  <!-- Layout con aside -->
+  <!-- Layout -->
   <div class="dashboard-layout">
     <!-- Aside -->
     <aside class="sidebar">
@@ -61,32 +61,42 @@
 
     <!-- Contenido principal -->
     <main class="dashboard-content">
-      <h2>Bienvenido, Juan</h2>
-      <p>Este es tu panel personal, donde puedes ver tu impacto y administrar tu actividad de reciclaje.</p>
+      <h2>Estadísticas de Reciclaje</h2>
+      <p>Visualiza tu progreso, impacto y hábitos de reciclaje.</p>
 
+      <!-- Cards resumen -->
       <div class="cards-grid">
         <div class="card">
           <i class="fa-solid fa-coins"></i>
-          <h3>350 Puntos</h3>
-          <p>Acumulados hasta la fecha</p>
+          <h3>1,200 Puntos</h3>
+          <p>Total acumulado</p>
         </div>
-
         <div class="card">
-          <i class="fa-solid fa-boxes-packing"></i>
-          <h3>Última entrega</h3>
-          <p>Plásticos - 5kg (12/09/2025)</p>
+          <i class="fa-solid fa-box"></i>
+          <h3>42 Entregas</h3>
+          <p>Realizadas en 2025</p>
         </div>
-
         <div class="card">
           <i class="fa-solid fa-seedling"></i>
-          <h3>Impacto Ambiental</h3>
-          <p>Has reducido 15kg de CO₂</p>
+          <h3>85 kg CO₂</h3>
+          <p>Reducción de huella</p>
         </div>
-
         <div class="card">
-          <i class="fa-solid fa-gift"></i>
-          <h3>Canjear Recompensas</h3>
-          <a href="canje.html" class="btn-cta">Canjear ahora</a>
+          <i class="fa-solid fa-recycle"></i>
+          <h3>Top: Plásticos</h3>
+          <p>Material más reciclado</p>
+        </div>
+      </div>
+
+      <!-- Gráficos -->
+      <div class="charts-grid">
+        <div class="chart-card">
+          <h3>Entregas por mes</h3>
+          <div class="chart-placeholder">[Gráfico de barras]</div>
+        </div>
+        <div class="chart-card">
+          <h3>Distribución de materiales</h3>
+          <div class="chart-placeholder">[Gráfico circular]</div>
         </div>
       </div>
     </main>

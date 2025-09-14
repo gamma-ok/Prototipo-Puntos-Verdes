@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Puntos Verdes | Inicio</title>
+  <title>Puntos Verdes | Historial de Entregas</title>
 
-  <link rel="stylesheet" href="/dashboard/ciudadano/inicio.css">
+  <link rel="stylesheet" href="/dashboard/ciudadano/historial.css">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -45,7 +45,7 @@
     </div>
   </header>
 
-  <!-- Layout con aside -->
+  <!-- Layout -->
   <div class="dashboard-layout">
     <!-- Aside -->
     <aside class="sidebar">
@@ -61,33 +61,52 @@
 
     <!-- Contenido principal -->
     <main class="dashboard-content">
-      <h2>Bienvenido, Juan</h2>
-      <p>Este es tu panel personal, donde puedes ver tu impacto y administrar tu actividad de reciclaje.</p>
+      <h2>Historial de Entregas</h2>
+      <p>Consulta todas tus entregas registradas y el detalle de tus puntos acumulados.</p>
 
-      <div class="cards-grid">
-        <div class="card">
-          <i class="fa-solid fa-coins"></i>
-          <h3>350 Puntos</h3>
-          <p>Acumulados hasta la fecha</p>
-        </div>
-
-        <div class="card">
-          <i class="fa-solid fa-boxes-packing"></i>
-          <h3>Última entrega</h3>
-          <p>Plásticos - 5kg (12/09/2025)</p>
-        </div>
-
-        <div class="card">
-          <i class="fa-solid fa-seedling"></i>
-          <h3>Impacto Ambiental</h3>
-          <p>Has reducido 15kg de CO₂</p>
-        </div>
-
-        <div class="card">
-          <i class="fa-solid fa-gift"></i>
-          <h3>Canjear Recompensas</h3>
-          <a href="canje.html" class="btn-cta">Canjear ahora</a>
-        </div>
+      <!-- Tabla -->
+      <div class="table-container">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Fecha</th>
+              <th>Material</th>
+              <th>Cantidad</th>
+              <th>Puntos Obtenidos</th>
+              <th>Ubicación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>12/09/2025</td>
+              <td>Plásticos</td>
+              <td>5 kg</td>
+              <td>50</td>
+              <td>Punto Verde San Isidro</td>
+            </tr>
+            <tr>
+              <td>05/09/2025</td>
+              <td>Papel y Cartón</td>
+              <td>3 kg</td>
+              <td>30</td>
+              <td>Punto Verde Miraflores</td>
+            </tr>
+            <tr>
+              <td>28/08/2025</td>
+              <td>Vidrio</td>
+              <td>2 kg</td>
+              <td>20</td>
+              <td>Punto Verde Surco</td>
+            </tr>
+            <tr>
+              <td>20/08/2025</td>
+              <td>Metales</td>
+              <td>1.5 kg</td>
+              <td>15</td>
+              <td>Punto Verde San Borja</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </main>
   </div>
