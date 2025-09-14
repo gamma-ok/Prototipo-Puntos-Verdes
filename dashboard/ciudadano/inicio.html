@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puntos Verdes | Dashboard Ciudadano</title>
+
+    <link rel="stylesheet" href="/dashboard/ciudadano/inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="shortcut icon" href="/img/logo-icon.png">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="dashboard-navbar">
+        <div class="nav-left">
+            <img src="/img/logo-puntos-verdes.png" alt="Logo Puntos Verdes" class="logo-img">
+            <h1>Dashboard Ciudadano</h1>
+        </div>
+        <nav class="nav-center">
+            <ul>
+                <li><a href="dashboard-ciudadano.html" class="active">Inicio</a></li>
+                <li><a href="historial.html">Historial</a></li>
+                <li><a href="canje.html">Canje</a></li>
+                <li><a href="estadisticas.html">Estadísticas</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <div class="user-menu">
+                <span>Juan Pérez</span>
+                <a href="logout.html" class="logout">Cerrar sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Layout con aside -->
+    <div class="dashboard-layout">
+        <!-- Aside -->
+        <aside class="sidebar">
+            <h3 class="sidebar-title">Opciones</h3>
+            <ul class="sidebar-menu">
+                <li><a href="perfil.html">Perfil</a></li>
+                <li><a href="ranking.html">Ranking</a></li>
+                <li><a href="campanias.html">Campañas</a></li>
+                <li><a href="ayuda.html">Ayuda</a></li>
+                <li><a href="about.html">Acerca de</a></li>
+            </ul>
+        </aside>
+
+
+        <!-- Contenido principal -->
+        <main class="dashboard-content">
+            <h2>Bienvenido, Juan</h2>
+            <p>Este es tu panel personal, donde puedes ver tu impacto y administrar tu actividad de reciclaje.</p>
+
+            <div class="cards-grid">
+                <div class="card">
+                    <h3>350 Puntos</h3>
+                    <p>Acumulados hasta la fecha</p>
+                </div>
+
+                <div class="card">
+                    <h3>Última entrega</h3>
+                    <p>Plásticos - 5kg (12/09/2025)</p>
+                </div>
+
+                <div class="card">
+                    <h3>Impacto Ambiental</h3>
+                    <p>Has reducido 15kg de CO₂</p>
+                </div>
+
+                <div class="card highlight">
+                    <h3>Canjear Recompensas</h3>
+                    <a href="canje.html" class="btn-cta">Canjear ahora</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Plataforma de Reciclaje y Puntos Verdes | Proyecto académico - Certus</p>
+    </footer>
+</body>
+
+</html>
