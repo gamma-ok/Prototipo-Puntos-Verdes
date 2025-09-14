@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estadísticas por Distrito | Dashboard Municipalidad</title>
+
+  <link rel="stylesheet" href="/dashboard/municipalidad/estadisticas-distrito.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="shortcut icon" href="/img/logo-icon.png">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="dashboard-navbar">
+    <div class="nav-left">
+      <img src="/img/dashboard-logo-puntos-verdes.png" alt="Logo Puntos Verdes" class="logo-img">
+      <h1>Dashboard Municipalidad</h1>
+    </div>
+    <nav class="nav-center">
+      <ul>
+        <li><a href="/dashboard/municipalidad/inicio.html">Inicio</a></li>
+        <li><a href="/dashboard/municipalidad/reportes-globales.html">Reportes Globales</a></li>
+        <li><a href="/dashboard/municipalidad/estadisticas-distrito.html" class="active">Estadísticas por Distrito</a></li>
+        <li><a href="/dashboard/municipalidad/gestion-campanias.html">Gestión de Campañas</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <div class="user-menu">
+        <img src="/img/foto-perfil.jpeg" alt="Usuario" class="user-avatar">
+        <span>Santiago Gamarra</span>
+        <a href="logout.html" class="logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Layout -->
+  <div class="dashboard-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3 class="sidebar-title">Opciones</h3>
+      <ul class="sidebar-menu">
+        <li><a href="/dashboard/municipalidad/aside/perfil.html"><i class="fa-solid fa-id-card"></i> Perfil</a></li>
+        <li><a href="/dashboard/municipalidad/aside/usuarios.html"><i class="fa-solid fa-users"></i> Usuarios</a></li>
+        <li><a href="/dashboard/municipalidad/aside/puntos-verdes.html"><i class="fa-solid fa-seedling"></i> Puntos Verdes</a></li>
+        <li><a href="/dashboard/municipalidad/aside/ayuda.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a></li>
+        <li><a href="/dashboard/municipalidad/aside/acercade.html"><i class="fa-solid fa-leaf"></i> Acerca de</a></li>
+      </ul>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="dashboard-content">
+      <div class="dashboard-header">
+        <h2>Estadísticas por Distrito</h2>
+        <p>Visualiza los datos de recolección y reciclaje por distrito y tipo de residuo.</p>
+      </div>
+
+      <!-- Filtro de Distrito -->
+      <div class="filter-section">
+        <label for="distrito">Selecciona un distrito:</label>
+        <select id="distrito">
+          <option value="miraflores">Miraflores</option>
+          <option value="san-isidro">San Isidro</option>
+          <option value="barranco">Barranco</option>
+          <option value="surco">Surco</option>
+          <option value="lince">Lince</option>
+        </select>
+      </div>
+
+      <!-- Tarjetas resumen -->
+      <div class="cards-grid">
+        <div class="card">
+          <i class="fa-solid fa-seedling"></i>
+          <h3>Puntos verdes</h3>
+          <p>350 puntos activos</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-recycle"></i>
+          <h3>Residuos recolectados</h3>
+          <p>1200 kg esta semana</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-truck"></i>
+          <h3>Rutas completadas</h3>
+          <p>18 rutas realizadas</p>
+        </div>
+        <div class="card">
+          <i class="fa-solid fa-exclamation-triangle"></i>
+          <h3>Incidencias</h3>
+          <p>3 reportes pendientes</p>
+        </div>
+      </div>
+
+      <!-- Gráficos -->
+      <div class="charts-grid">
+        <div class="chart-card">
+          <h3>Residuos por tipo</h3>
+          <div class="chart-placeholder">[Gráfico de barras]</div>
+        </div>
+        <div class="chart-card">
+          <h3>Comparativa semanal</h3>
+          <div class="chart-placeholder">[Gráfico de línea]</div>
+        </div>
+        <div class="chart-card">
+          <h3>Ranking de distritos</h3>
+          <div class="chart-placeholder">[Gráfico de barras horizontales]</div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Plataforma de Reciclaje y Puntos Verdes | Proyecto académico - Certus</p>
+  </footer>
+</body>
+
+</html>

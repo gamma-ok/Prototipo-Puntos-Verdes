@@ -4,16 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Puntos Verdes | Gestión de Campañas</title>
+  <title>Puntos Verdes | Perfil</title>
 
-  <link rel="stylesheet" href="/dashboard/municipalidad/gestion-campanias.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  <link rel="stylesheet" href="/dashboard/municipalidad/aside/perfil.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
   <link rel="shortcut icon" href="/img/logo-icon.png">
@@ -45,11 +47,11 @@
 
   <!-- Layout -->
   <div class="dashboard-layout">
-    <!-- Sidebar -->
+    <!-- Aside -->
     <aside class="sidebar">
       <h3 class="sidebar-title">Opciones</h3>
       <ul class="sidebar-menu">
-        <li><a href="/dashboard/municipalidad/aside/perfil.html"><i class="fa-solid fa-id-card"></i> Perfil</a></li>
+        <li><a href="/dashboard/municipalidad/aside/perfil.html" class="active"><i class="fa-solid fa-id-card"></i> Perfil</a></li>
         <li><a href="/dashboard/municipalidad/aside/usuarios.html"><i class="fa-solid fa-users"></i> Usuarios</a></li>
         <li><a href="/dashboard/municipalidad/aside/puntos-verdes.html"><i class="fa-solid fa-seedling"></i> Puntos
             Verdes</a></li>
@@ -60,37 +62,45 @@
 
     <!-- Contenido principal -->
     <main class="dashboard-content">
-      <div class="content-header">
-        <h2>Gestión de Campañas</h2>
-        <p>Administra y monitorea las campañas de reciclaje activas y planificadas.</p>
+      <div class="perfil-header">
+        <h2>Mi Perfil</h2>
+        <p>Consulta y actualiza tu información personal.</p>
       </div>
 
-      <div class="cards-grid">
-        <div class="card">
-          <i class="fa-solid fa-bullhorn card-icon"></i>
-          <h3>Campaña Z3 - Orgánicos</h3>
-          <p>Inicia: 15/09/2025 | Finaliza: 30/09/2025</p>
-          <p>Objetivo: Concienciación sobre residuos orgánicos</p>
-          <button class="btn-editar"><i class="fa-solid fa-pen"></i> Editar</button>
-          <button class="btn-desactivar"><i class="fa-solid fa-ban"></i> Desactivar</button>
+      <div class="perfil-container">
+        <!-- Formulario de datos -->
+        <div class="perfil-form">
+          <form>
+            <div class="form-group">
+              <label>Nombre completo</label>
+              <input type="text" value="Santiago Gamarra">
+            </div>
+            <div class="form-group">
+              <label>Correo electrónico</label>
+              <input type="email" value="santiago@example.com">
+            </div>
+            <div class="form-group">
+              <label>Teléfono</label>
+              <input type="text" value="+51 987 654 321">
+            </div>
+            <div class="form-group">
+              <label>Dirección</label>
+              <input type="text" value="Av. Principal 123, Lima">
+            </div>
+            <div class="form-group">
+              <label>Contraseña</label>
+              <input type="password" value="**********">
+            </div>
+            <button type="submit" class="btn-guardar">Guardar Cambios</button>
+          </form>
         </div>
 
-        <div class="card">
-          <i class="fa-solid fa-bullhorn card-icon"></i>
-          <h3>Campaña Z1 - Plásticos</h3>
-          <p>Inicia: 01/09/2025 | Finaliza: 15/09/2025</p>
-          <p>Objetivo: Reciclaje de plásticos en escuelas</p>
-          <button class="btn-editar"><i class="fa-solid fa-pen"></i> Editar</button>
-          <button class="btn-desactivar"><i class="fa-solid fa-ban"></i> Desactivar</button>
-        </div>
-
-        <div class="card">
-          <i class="fa-solid fa-bullhorn card-icon"></i>
-          <h3>Campaña Z2 - Papel y Cartón</h3>
-          <p>Inicia: 05/09/2025 | Finaliza: 20/09/2025</p>
-          <p>Objetivo: Recolección en oficinas municipales</p>
-          <button class="btn-editar"><i class="fa-solid fa-pen"></i> Editar</button>
-          <button class="btn-desactivar"><i class="fa-solid fa-ban"></i> Desactivar</button>
+        <!-- Card de perfil -->
+        <div class="perfil-card">
+          <img src="/img/foto-perfil.jpeg" alt="Foto de perfil" class="perfil-foto">
+          <h3>Santiago Gamarra</h3>
+          <p>Ciudadano activo desde marzo 2024</p>
+          <button class="btn-editar"><i class="fa-solid fa-pen"></i> Editar Foto</button>
         </div>
       </div>
     </main>

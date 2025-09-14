@@ -6,7 +6,7 @@ body {
   color: #333;
 }
 
-/* ====== NAVBAR DASHBOARD ====== */
+/* ====== NAVBAR ====== */
 .dashboard-navbar {
   background: #004080;
   color: #fff;
@@ -35,7 +35,6 @@ body {
   font-weight: 600;
 }
 
-/* Navbar links con separadores */
 .dashboard-navbar ul {
   list-style: none;
   display: flex;
@@ -89,6 +88,7 @@ body {
 }
 
 .dashboard-navbar ul li a.active {
+  color: #fff;
   font-weight: 600;
 }
 
@@ -181,133 +181,118 @@ body {
   border-left: 4px solid #8ab900;
 }
 
-/* ====== CONTENIDO ====== */
-.dashboard-content {
-  padding: 2rem;
+/* ====== PERFIL HEADER ====== */
+.perfil-header {
+  margin: 2rem 2rem 1.5rem 2rem; /* espacio superior respecto al navbar y lados */
 }
 
-.dashboard-content h2 {
+.perfil-header h2 {
+  margin: 0 0 0.3rem 0;
   color: #004080;
-  margin-bottom: 0.5rem;
 }
 
-.dashboard-content p {
+.perfil-header p {
+  margin: 0;
   color: #555;
-  margin-bottom: 2rem;
 }
 
-/* ====== SECCION DE FILTRO ====== */
-.filter-section {
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
+/* ====== PERFIL ====== */
+.perfil-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* formulario 3/4 y card 1/4 */
+  gap: 2rem;
+  align-items: start;
+  margin: 0 2rem 2rem 2rem; /* margen lateral para que no esté pegado a los bordes */
 }
 
-.filter-section label {
+.perfil-form {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.perfil-form .form-group {
+  margin-bottom: 1.2rem;
+}
+
+.perfil-form label {
+  display: block;
   font-weight: 500;
+  margin-bottom: 0.4rem;
   color: #004080;
 }
 
-.filter-section select {
-  padding: 0.5rem 1rem;
+.perfil-form input {
+  width: 97%;
+  padding: 0.8rem;
   border-radius: 8px;
   border: 1px solid #ccc;
-  font-size: 0.95rem;
-  background: #fff;
-  transition: border 0.3s;
+  outline: none;
+  transition: border 0.3s, box-shadow 0.3s;
 }
 
-.filter-section select:hover {
-  border-color: #8ab900;
+.perfil-form input:focus {
+  border: 1px solid #004080;
+  box-shadow: 0 0 6px rgba(0,64,128,0.3);
 }
 
-/* ====== CARDS ====== */
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+.btn-guardar {
+  display: inline-block;
+  background: #8ab900;
+  color: #fff;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
-.card {
+.btn-guardar:hover {
+  background: #6f9205;
+}
+
+.perfil-card {
   background: #fff;
   padding: 2rem;
   border-radius: 14px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
   text-align: center;
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card i {
-  font-size: 2rem;
-  color: #8ab900;
-  margin-bottom: 0.8rem;
-}
-
-.card h3 {
-  font-size: 1.3rem;
-  color: #003366;
-  margin-bottom: 0.3rem;
-}
-
-.card p {
-  font-size: 0.95rem;
-  color: #555;
-}
-
-/* ====== GRID DE GRAFICOS ====== */
-.charts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1.5rem;
-}
-
-.chart-card {
-  background: #fff;
-  padding: 1.5rem;
-  border-radius: 14px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.08);
 }
 
-.chart-card h3 {
-  font-size: 1.1rem;
-  color: #004080;
+.perfil-card .perfil-foto {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #8ab900;
   margin-bottom: 1rem;
 }
 
-.chart-placeholder {
-  height: 200px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #f1f5f9;
-  border-radius: 10px;
-  color: #999;
-  font-size: 0.95rem;
-  font-weight: 500;
+.perfil-card h3 {
+  color: #004080;
+  margin-bottom: 0.3rem;
 }
 
-/* ====== BOTONES ====== */
-.btn-cta {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.7rem 1.5rem;
-  border-radius: 30px;
+.perfil-card p {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.btn-editar {
   background: #004080;
   color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background 0.3s, color 0.3s;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background 0.3s;
 }
 
-.btn-cta:hover {
+.btn-editar:hover {
   background: #003366;
-  color: #fff;
 }
 
 /* ====== FOOTER ====== */
