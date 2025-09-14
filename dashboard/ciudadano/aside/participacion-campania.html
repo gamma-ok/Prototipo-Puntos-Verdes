@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Participar en Campaña | Puntos Verdes</title>
+
+    <link rel="stylesheet" href="/dashboard/ciudadano/aside/perfil.css">
+    <link rel="stylesheet" href="/dashboard/ciudadano/aside/campanias.css">
+    <link rel="stylesheet" href="/dashboard/ciudadano/aside/participacion-campania.html">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="shortcut icon" href="/img/logo-icon.png">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="dashboard-navbar">
+        <div class="nav-left">
+            <img src="/img/dashboard-logo-puntos-verdes.png" alt="Logo Puntos Verdes" class="logo-img">
+            <h1>Dashboard Ciudadano</h1>
+        </div>
+        <nav class="nav-center">
+            <ul>
+                <li><a href="/dashboard/ciudadano/inicio.html">Inicio</a></li>
+                <li><a href="/dashboard/ciudadano/historial.html">Historial</a></li>
+                <li><a href="/dashboard/ciudadano/canje.html">Canje</a></li>
+                <li><a href="/dashboard/ciudadano/estadisticas.html">Estadísticas</a></li>
+            </ul>
+        </nav>
+        <div class="nav-right">
+            <div class="user-menu">
+                <img src="/img/foto-perfil.jpeg" alt="Usuario" class="user-avatar">
+                <span>Santiago Gamarra</span>
+                <a href="logout.html" class="logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Layout -->
+    <div class="dashboard-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h3 class="sidebar-title">Opciones</h3>
+            <ul class="sidebar-menu">
+                <li><a href="/dashboard/ciudadano/aside/perfil.html"><i class="fa-solid fa-id-card"></i> Perfil</a></li>
+                <li><a href="/dashboard/ciudadano/aside/ranking.html"><i class="fa-solid fa-trophy"></i> Ranking</a>
+                </li>
+                <li><a href="/dashboard/ciudadano/aside/campanias.html" class="active"><i
+                            class="fa-solid fa-bullhorn"></i> Campañas</a></li>
+                <li><a href="/dashboard/ciudadano/aside/ayuda.html"><i class="fa-solid fa-circle-question"></i>
+                        Ayuda</a></li>
+                <li><a href="/dashboard/ciudadano/aside/acercade.html"><i class="fa-solid fa-leaf"></i> Acerca de</a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- Contenido principal -->
+        <main class="dashboard-content">
+            <!-- Usamos la misma clase que Campañas para el header -->
+            <div class="perfil-header">
+                <h2>Participar en Campaña</h2>
+                <p>Sube evidencia de tu participación para acumular puntos verdes.</p>
+            </div>
+
+            <!-- Usamos la misma clase que Campañas para la card -->
+            <div class="campanas-container">
+                <div class="campana-card participar-card">
+                    <h3>Reciclaje de Plásticos</h3>
+                    <p>Campaña para recolectar botellas plásticas y promover su reciclaje en Lima.</p>
+                    <p><strong>Fecha:</strong> 15 Septiembre - 30 Septiembre 2025</p>
+
+                    <!-- Formulario de participación -->
+                    <form class="form-participar">
+                        <!-- Subir varias fotos -->
+                        <div class="form-group">
+                            <label for="foto-participacion">Sube tus fotos de participación:</label>
+                        </div>
+
+                        <div>
+                            <input type="file" id="foto-participacion" accept="image/*" multiple required>
+                        </div>
+
+                        <!-- Comentarios -->
+                        <div class="form-group">
+                            <label for="comentario">Comentarios (opcional):</label>
+                        </div>
+
+                        <div>
+                            <textarea id="comentario" rows="4" placeholder="Escribe algo sobre tu participación..."></textarea>
+                        </div>
+
+                        <!-- Botón enviar -->
+                        <button type="submit" class="btn-participar">
+                            <i class="fa-solid fa-check"></i> Enviar Participación
+                        </button>
+
+                        <!-- Mensaje de éxito -->
+                        <div class="mensaje-exito" style="display:none;">
+                            <i class="fa-solid fa-circle-check"></i> ¡Participación registrada exitosamente! Has ganado
+                            puntos verdes.
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Plataforma de Reciclaje y Puntos Verdes | Proyecto académico - Certus</p>
+    </footer>
+</body>
+
+</html>

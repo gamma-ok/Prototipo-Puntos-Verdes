@@ -1,0 +1,94 @@
+/* Contenedor principal de cards */
+.campanas-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 0 2rem 2rem 2rem;
+}
+
+/* Card de participación */
+.campana-card.participar-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* separación entre h3, p y form */
+}
+
+/* Títulos y textos del card */
+.participar-card h3 {
+  color: #004080;
+  margin-bottom: 0.5rem;
+}
+
+.participar-card p {
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+/* Formulario de participación */
+.form-participar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* espacio entre grupos de inputs */
+}
+
+/* Agrupamos label e input por separado */
+.form-participar .form-group,
+.form-participar > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* separación label -> input/textarea */
+}
+
+/* Inputs y textarea */
+.form-participar input[type="file"],
+.form-participar textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
+}
+
+/* Textarea específico */
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Botón de enviar participación */
+.btn-participar {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-weight: 500;
+  background: #8ab900;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background 0.3s;
+}
+
+.btn-participar i {
+  margin-right: 0.4rem;
+}
+
+.btn-participar:hover {
+  background: #6f9205;
+}
+
+/* Mensaje de éxito */
+.mensaje-exito {
+  margin-top: 1rem;
+  color: #008000;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
