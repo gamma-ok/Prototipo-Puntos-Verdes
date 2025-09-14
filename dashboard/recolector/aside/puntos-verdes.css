@@ -35,6 +35,7 @@ body {
   font-weight: 600;
 }
 
+/* Navbar links con separadores */
 .dashboard-navbar ul {
   list-style: none;
   display: flex;
@@ -216,9 +217,17 @@ body {
   transform: translateY(-5px);
 }
 
+/* Iconos de Rutas */
 .card i.fa-route {
   font-size: 2rem;
   color: #8ab900;
+  margin-bottom: 0.8rem;
+}
+
+/* Iconos de Puntos Verdes */
+.card i.fa-map-location-dot {
+  font-size: 2rem;       /* aumenta tamaño */
+  color: #8ab900;        /* color verde */
   margin-bottom: 0.8rem;
 }
 
@@ -231,13 +240,15 @@ body {
 .card p {
   font-size: 0.95rem;
   color: #555;
+  line-height: 2.0;       /* espacio entre líneas */
+  margin: 0.3rem 0;
 }
 
 /* ====== BOTONES ====== */
 .btn-editar {
-  display: inline-flex;           /* flex horizontal */
-  align-items: center;            /* icono y texto alineados */
-  gap: 0.4rem;                    /* espacio entre icono y texto */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   justify-content: center;
   padding: 0.6rem 1.2rem;
   border-radius: 30px;
@@ -255,7 +266,7 @@ body {
 }
 
 .btn-editar i {
-  font-size: 0.95rem; /* igual que el texto */
+  font-size: 0.95rem;
   color: #fff;
   line-height: 1;
 }

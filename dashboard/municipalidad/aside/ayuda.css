@@ -1,0 +1,276 @@
+/* ====== BASE ====== */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #f8f9fa;
+  margin: 0;
+  color: #333;
+}
+
+/* ====== NAVBAR DASHBOARD ====== */
+.dashboard-navbar {
+  background: #004080;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.dashboard-navbar .logo-img {
+  height: 45px;
+  margin-right: 10px;
+}
+
+.dashboard-navbar .nav-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.dashboard-navbar h1 {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+/* Navbar links con separadores */
+.dashboard-navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.dashboard-navbar ul li {
+  position: relative;
+  padding: 0 0.5rem;
+}
+
+.dashboard-navbar ul li::after {
+  content: "|";
+  position: absolute;
+  right: -1rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.dashboard-navbar ul li:last-child::after {
+  content: "";
+}
+
+.dashboard-navbar ul li a {
+  position: relative;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+  padding-bottom: 4px;
+  transition: color 0.3s;
+}
+
+.dashboard-navbar ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background: #8ab900;
+  transition: width 0.3s ease-in-out;
+}
+
+.dashboard-navbar ul li a:hover::after {
+  width: 100%;
+}
+
+.dashboard-navbar ul li a:hover {
+  color: #8ab900;
+}
+
+.dashboard-navbar ul li a.active {
+  font-weight: 600;
+}
+
+/* Usuario */
+.user-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.logout {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-left: 0.5rem;
+  transition: color 0.3s;
+}
+
+.logout:hover {
+  color: #ff4444;
+}
+
+/* ====== LAYOUT ====== */
+.dashboard-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: calc(100vh - 120px);
+}
+
+/* ====== SIDEBAR ====== */
+.sidebar {
+  background: #fff;
+  padding: 2rem 1rem;
+  border-right: 1px solid #ddd;
+}
+
+.sidebar-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #004080;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-bottom: 0.3rem;
+}
+
+.sidebar-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  height: 3px;
+  background: #8ab900;
+  border-radius: 2px;
+}
+
+.sidebar-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.sidebar-menu li a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.8rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #333;
+  text-decoration: none;
+  border-radius: 8px;
+  border-left: 4px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li a.active {
+  background: #f5f9f2;
+  color: #004080;
+  border-left: 4px solid #8ab900;
+}
+
+/* ====== CONTENIDO ====== */
+.dashboard-content {
+  padding: 2rem;
+}
+
+.dashboard-content h2 {
+  color: #004080;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-content p {
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* ====== CARDS HELP ====== */
+.help-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Iconos grandes de los cards */
+.card i {
+  font-size: 2rem;
+  color: #8ab900;
+  margin-bottom: 0.8rem;
+  display: block;
+}
+
+/* Titulos y textos */
+.card h3 {
+  font-size: 1.3rem;
+  color: #003366;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Botones de llamada a la acción */
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
+  background: #004080;
+  color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-cta:hover {
+  background: #003366;
+}
+
+/* Iconos dentro de los botones */
+.btn-cta i {
+  font-size: 0.95rem;
+  color: #fff;
+  line-height: 1;
+}
+
+/* ====== FOOTER ====== */
+footer {
+  background: #212529;
+  color: #fff;
+  padding: 1.2rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
