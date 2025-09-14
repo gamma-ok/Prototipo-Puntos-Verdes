@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puntos Verdes | Entregas</title>
+
+  <link rel="stylesheet" href="/dashboard/recolector/entregas.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="shortcut icon" href="/img/logo-icon.png">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="dashboard-navbar">
+    <div class="nav-left">
+      <img src="/img/dashboard-logo-puntos-verdes.png" alt="Logo Puntos Verdes" class="logo-img">
+      <h1>Dashboard Recolector</h1>
+    </div>
+    <nav class="nav-center">
+      <ul>
+        <li><a href="/dashboard/recolector/inicio.html">Inicio</a></li>
+        <li><a href="/dashboard/recolector/entregas.html" class="active">Entregas</a></li>
+        <li><a href="/dashboard/recolector/rutas.html">Rutas</a></li>
+        <li><a href="/dashboard/recolector/incidencias.html">Incidencias</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <div class="user-menu">
+        <img src="/img/foto-perfil.jpeg" alt="Usuario" class="user-avatar">
+        <span>Santiago Gamarra</span>
+        <a href="logout.html" class="logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Layout con aside -->
+  <div class="dashboard-layout">
+    <!-- Aside -->
+    <aside class="sidebar">
+      <h3 class="sidebar-title">Opciones</h3>
+      <ul class="sidebar-menu">
+        <li><a href="/dashboard/recolector/perfil.html"><i class="fa-solid fa-id-card"></i> Perfil</a></li>
+        <li><a href="/dashboard/recolector/puntos-verdes.html"><i class="fa-solid fa-seedling"></i> Puntos Verdes</a></li>
+        <li><a href="/dashboard/recolector/reportes.html"><i class="fa-solid fa-file-alt"></i> Reportes</a></li>
+        <li><a href="/dashboard/recolector/ayuda.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a></li>
+        <li><a href="/dashboard/recolector/acercade.html"><i class="fa-solid fa-leaf"></i> Acerca de</a></li>
+      </ul>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="dashboard-content">
+      <div class="content-header">
+        <h2>Entregas Registradas</h2>
+        <p>Consulta y gestiona las entregas realizadas en tu zona.</p>
+      </div>
+
+      <div class="entregas-container">
+        <table class="entregas-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Fecha</th>
+              <th>Tipo de Residuos</th>
+              <th>Peso</th>
+              <th>Zona</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>12/09/2025</td>
+              <td>Plástico</td>
+              <td>5 kg</td>
+              <td>Zona A</td>
+              <td><span class="estado-pendiente">Pendiente</span></td>
+              <td><button class="btn-editar"><i class="fa-solid fa-pen"></i> Editar</button></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>11/09/2025</td>
+              <td>Cartón</td>
+              <td>8 kg</td>
+              <td>Zona B</td>
+              <td><span class="estado-completado">Completado</span></td>
+              <td><button class="btn-editar"><i class="fa-solid fa-pen"></i> Editar</button></td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>10/09/2025</td>
+              <td>Vidrio</td>
+              <td>3 kg</td>
+              <td>Zona C</td>
+              <td><span class="estado-pendiente">Pendiente</span></td>
+              <td><button class="btn-editar"><i class="fa-solid fa-pen"></i> Editar</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Plataforma de Reciclaje y Puntos Verdes | Proyecto académico - Certus</p>
+  </footer>
+</body>
+
+</html>

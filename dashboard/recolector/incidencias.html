@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Puntos Verdes | Incidencias</title>
+
+  <link rel="stylesheet" href="/dashboard/recolector/incidencias.css">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="shortcut icon" href="/img/logo-icon.png">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="dashboard-navbar">
+    <div class="nav-left">
+      <img src="/img/dashboard-logo-puntos-verdes.png" alt="Logo Puntos Verdes" class="logo-img">
+      <h1>Dashboard Recolector</h1>
+    </div>
+    <nav class="nav-center">
+      <ul>
+        <li><a href="/dashboard/recolector/inicio.html">Inicio</a></li>
+        <li><a href="/dashboard/recolector/entregas.html">Entregas</a></li>
+        <li><a href="/dashboard/recolector/rutas.html">Rutas</a></li>
+        <li><a href="/dashboard/recolector/incidencias.html" class="active">Incidencias</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <div class="user-menu">
+        <img src="/img/foto-perfil.jpeg" alt="Usuario" class="user-avatar">
+        <span>Juan Pérez</span>
+        <a href="logout.html" class="logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Layout -->
+  <div class="dashboard-layout">
+    <!-- Aside -->
+    <aside class="sidebar">
+      <h3 class="sidebar-title">Opciones</h3>
+      <ul class="sidebar-menu">
+        <li><a href="/dashboard/recolector/aside/perfil.html"><i class="fa-solid fa-id-card"></i> Perfil</a></li>
+        <li><a href="/dashboard/recolector/aside/puntosverdes.html"><i class="fa-solid fa-seedling"></i> Puntos Verdes</a></li>
+        <li><a href="/dashboard/recolector/aside/reportes.html"><i class="fa-solid fa-file-alt"></i> Reportes</a></li>
+        <li><a href="/dashboard/recolector/aside/ayuda.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a></li>
+        <li><a href="/dashboard/recolector/aside/acercade.html"><i class="fa-solid fa-leaf"></i> Acerca de</a></li>
+      </ul>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="dashboard-content">
+      <div class="content-header">
+        <h2>Reporte de Incidencias</h2>
+        <p>Visualiza, registra y actualiza cualquier incidencia en tus rutas de recolección.</p>
+      </div>
+
+      <div class="cards-grid">
+        <div class="card">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <h3>Incidencia 001</h3>
+          <p>Ruta: Norte</p>
+          <p>Tipo: Retraso por tráfico</p>
+          <p>Estado: Pendiente</p>
+          <button class="btn-editar"><i class="fa-solid fa-pen"></i> <span>Actualizar</span></button>
+        </div>
+
+        <div class="card">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <h3>Incidencia 002</h3>
+          <p>Ruta: Sur</p>
+          <p>Tipo: Contenedor lleno</p>
+          <p>Estado: Resuelto</p>
+          <button class="btn-editar"><i class="fa-solid fa-pen"></i> <span>Actualizar</span></button>
+        </div>
+
+        <div class="card">
+          <i class="fa-solid fa-triangle-exclamation"></i>
+          <h3>Incidencia 003</h3>
+          <p>Ruta: Este</p>
+          <p>Tipo: Problema de acceso</p>
+          <p>Estado: Pendiente</p>
+          <button class="btn-editar"><i class="fa-solid fa-pen"></i> <span>Actualizar</span></button>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Plataforma de Reciclaje y Puntos Verdes | Proyecto académico - Certus</p>
+  </footer>
+</body>
+
+</html>
