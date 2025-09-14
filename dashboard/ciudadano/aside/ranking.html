@@ -4,9 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Puntos Verdes | Inicio</title>
+  <title>Puntos Verdes | Ranking</title>
 
-  <link rel="stylesheet" href="/dashboard/ciudadano/inicio.css">
+  <link rel="stylesheet" href="/dashboard/ciudadano/aside/perfil.css">
+  <link rel="stylesheet" href="/dashboard/ciudadano/aside/ranking.css">
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -30,7 +31,7 @@
     </div>
     <nav class="nav-center">
       <ul>
-        <li><a href="/dashboard/ciudadano/inicio.html" class="active">Inicio</a></li>
+        <li><a href="/dashboard/ciudadano/inicio.html">Inicio</a></li>
         <li><a href="/dashboard/ciudadano/historial.html">Historial</a></li>
         <li><a href="/dashboard/ciudadano/canje.html">Canje</a></li>
         <li><a href="/dashboard/ciudadano/estadisticas.html">Estadísticas</a></li>
@@ -45,14 +46,14 @@
     </div>
   </header>
 
-  <!-- Layout con aside -->
+  <!-- Layout -->
   <div class="dashboard-layout">
-    <!-- Aside -->
+    <!-- Sidebar -->
     <aside class="sidebar">
       <h3 class="sidebar-title">Opciones</h3>
       <ul class="sidebar-menu">
         <li><a href="/dashboard/ciudadano/aside/perfil.html"><i class="fa-solid fa-id-card"></i> Perfil</a></li>
-        <li><a href="/dashboard/ciudadano/aside/ranking.html"><i class="fa-solid fa-trophy"></i> Ranking</a></li>
+        <li><a href="/dashboard/ciudadano/aside/ranking.html" class="active"><i class="fa-solid fa-trophy"></i> Ranking</a></li>
         <li><a href="/dashboard/ciudadano/aside/campanias.html"><i class="fa-solid fa-bullhorn"></i> Campañas</a></li>
         <li><a href="/dashboard/ciudadano/aside/ayuda.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a></li>
         <li><a href="/dashboard/ciudadano/aside/acercade.html"><i class="fa-solid fa-leaf"></i> Acerca de</a></li>
@@ -61,33 +62,48 @@
 
     <!-- Contenido principal -->
     <main class="dashboard-content">
-      <h2>Bienvenido, Juan</h2>
-      <p>Este es tu panel personal, donde puedes ver tu impacto y administrar tu actividad de reciclaje.</p>
+      <div class="perfil-header">
+        <h2>Ranking Ciudadanos</h2>
+        <p>Consulta el ranking de ciudadanos según los puntos verdes acumulados.</p>
+      </div>
 
-      <div class="cards-grid">
-        <div class="card">
-          <i class="fa-solid fa-coins"></i>
-          <h3>350 Puntos</h3>
-          <p>Acumulados hasta la fecha</p>
-        </div>
-
-        <div class="card">
-          <i class="fa-solid fa-boxes-packing"></i>
-          <h3>Última entrega</h3>
-          <p>Plásticos - 5kg (12/09/2025)</p>
-        </div>
-
-        <div class="card">
-          <i class="fa-solid fa-seedling"></i>
-          <h3>Impacto Ambiental</h3>
-          <p>Has reducido 15kg de CO₂</p>
-        </div>
-
-        <div class="card">
-          <i class="fa-solid fa-gift"></i>
-          <h3>Canjear Recompensas</h3>
-          <a href="canje.html" class="btn-cta">Canjear ahora</a>
-        </div>
+      <div class="ranking-container">
+        <table class="ranking-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Ciudadano</th>
+              <th>Puntos Verdes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Santiago Gamarra</td>
+              <td>1,250</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>María López</td>
+              <td>1,180</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Carlos Pérez</td>
+              <td>1,050</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>Ana Torres</td>
+              <td>980</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>José Ramírez</td>
+              <td>910</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </main>
   </div>
