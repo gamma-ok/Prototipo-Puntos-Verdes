@@ -1,0 +1,132 @@
+/* ====== LOGIN SECTION ====== */
+.login-section {
+  position: relative;
+  min-height: calc(100vh - 140px); /* Altura menos navbar + footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  background: url('/img/banner-login.jpg') center/cover no-repeat;
+}
+
+.login-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* Oscuridad sobre la imagen */
+  z-index: 0;
+}
+
+/* ====== LOGIN CARD ====== */
+.login-card {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  padding: 3rem 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.login-header .logo-login {
+  width: 70px;
+  margin-bottom: 1rem;
+}
+
+.login-header h2 {
+  margin-bottom: 0.3rem;
+  color: #004080;
+  font-size: 1.6rem;
+}
+
+.login-header p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1.8rem;
+}
+
+/* ====== FORM ====== */
+.login-form .form-group {
+  margin-bottom: 1.3rem;
+  text-align: left;
+}
+
+.login-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: #003366;
+  font-size: 0.95rem;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.login-form input:focus {
+  border: 1px solid #004080;
+  box-shadow: 0 0 6px rgba(0,64,128,0.3);
+  outline: none;
+}
+
+.login-form button {
+  width: 100%;
+  background: #8ab900;
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.login-form button:hover {
+  background: #6f9205;
+}
+
+/* ====== LINKS ====== */
+.extra-links {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.extra-links a {
+  color: #004080;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.extra-links a:hover {
+  color: #0066cc;
+}
+
+.register-link {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.register-link a {
+  color: #004080;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.register-link a:hover {
+  color: #0066cc;
+}
+
+/* ====== ANIMACIÓN ====== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

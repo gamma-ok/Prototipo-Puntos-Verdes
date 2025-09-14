@@ -1,0 +1,117 @@
+/* ====== REGISTER SECTION ====== */
+.register-section {
+  position: relative;
+  min-height: calc(100vh - 140px); /* Altura total menos navbar + footer */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  background: url('/img/banner-registro.jpg') center/cover no-repeat;
+}
+
+.register-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55); /* Overlay oscuro */
+  z-index: 0;
+}
+
+/* ====== REGISTER CARD ====== */
+.register-card {
+  position: relative;
+  z-index: 1;
+  background: #fff;
+  padding: 3rem 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  width: 100%;
+  max-width: 480px;
+  text-align: center;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.register-header .logo-register {
+  width: 70px;
+  margin-bottom: 1rem;
+}
+
+.register-header h2 {
+  margin-bottom: 0.3rem;
+  color: #004080;
+  font-size: 1.6rem;
+}
+
+.register-header p {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1.8rem;
+}
+
+/* ====== FORM ====== */
+.register-form .form-group {
+  margin-bottom: 1.3rem;
+  text-align: left;
+}
+
+.register-form label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+  color: #003366;
+  font-size: 0.95rem;
+}
+
+.register-form input {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-form input:focus {
+  border: 1px solid #004080;
+  box-shadow: 0 0 6px rgba(0,64,128,0.3);
+  outline: none;
+}
+
+.register-form button {
+  width: 100%;
+  background: #8ab900;
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.register-form button:hover {
+  background: #6f9205;
+}
+
+/* ====== LINKS ====== */
+.login-link {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.login-link a {
+  color: #004080;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  color: #0066cc;
+}
+
+/* ====== ANIMACIÓN ====== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
