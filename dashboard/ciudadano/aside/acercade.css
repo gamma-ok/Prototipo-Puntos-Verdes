@@ -1,0 +1,23 @@
+.acercade-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin: 0 2rem 2rem 2rem;
+}
+
+.acercade-card {
+  background: #fff;
+  padding: 1.8rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+}
+
+.acercade-card h3 {
+  color: #004080;
+  margin-bottom: 0.5rem;
+}
+
+.acercade-card p {
+  color: #555;
+  margin: 0;
+}
