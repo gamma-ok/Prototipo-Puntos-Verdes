@@ -32,15 +32,15 @@
 .form-participar {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem; /* espacio entre grupos de inputs */
 }
 
-/* Agrupamos label e input por separado */
-.form-participar .form-group,
-.form-participar > div {
+/* Cada bloque del formulario */
+.form-participar .form-block {
+  margin-bottom: 1rem; /* separación entre bloques */
   display: flex;
   flex-direction: column;
-  gap: 0.5rem; /* separación label -> input/textarea */
+  padding: 15px;
+  gap: 0.5rem; /* separación label -> input/textarea/boton */
 }
 
 /* Inputs y textarea */
@@ -62,8 +62,10 @@ textarea {
 
 /* Botón de enviar participación */
 .btn-participar {
-  display: block;
-  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
   padding: 0.8rem;
   border-radius: 8px;
   font-weight: 500;
@@ -71,12 +73,7 @@ textarea {
   color: #fff;
   border: none;
   cursor: pointer;
-  text-align: center;
   transition: background 0.3s;
-}
-
-.btn-participar i {
-  margin-right: 0.4rem;
 }
 
 .btn-participar:hover {

@@ -79,37 +79,32 @@
 
                     <!-- Formulario de participación -->
                     <form class="form-participar">
-                        <!-- Subir varias fotos -->
-                        <div class="form-group">
-                            <label for="foto-participacion">Sube tus fotos de participación:</label>
-                        </div>
-
-                        <div>
-                            <input type="file" id="foto-participacion" accept="image/*" multiple required>
-                        </div>
+                        <!-- Label fotos -->
+                        <!-- Subir fotos -->
+                        <label for="foto-participacion">Sube tus fotos de participación:</label><br>
+                        <input type="file" id="foto-participacion" accept="image/*" multiple required><br><br>
 
                         <!-- Comentarios -->
-                        <div class="form-group">
-                            <label for="comentario">Comentarios (opcional):</label>
-                        </div>
-
-                        <div>
-                            <textarea id="comentario" rows="4" placeholder="Escribe algo sobre tu participación..."></textarea>
-                        </div>
+                        <label for="comentario">Comentarios (opcional):</label><br>
+                        <textarea id="comentario" rows="6" placeholder="Escribe algo sobre tu participación..."></textarea><br><br>
 
                         <!-- Botón enviar -->
                         <button type="submit" class="btn-participar">
                             <i class="fa-solid fa-check"></i> Enviar Participación
                         </button>
 
+
                         <!-- Mensaje de éxito -->
-                        <div class="mensaje-exito" style="display:none;">
-                            <i class="fa-solid fa-circle-check"></i> ¡Participación registrada exitosamente! Has ganado
-                            puntos verdes.
+                        <div class="form-block">
+                            <div class="mensaje-exito" style="display:none;">
+                                <i class="fa-solid fa-circle-check"></i> ¡Participación registrada exitosamente! Has
+                                ganado puntos verdes.
+                            </div>
                         </div>
                     </form>
                 </div>
             </div>
+
 
         </main>
     </div>
