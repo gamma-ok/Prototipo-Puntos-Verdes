@@ -4,18 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Puntos Verdes | Rutas</title>
+  <title>Acerca de | Dashboard Recolector</title>
 
-  <link rel="stylesheet" href="/dashboard/recolector/rutas.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  <link rel="stylesheet" href="/dashboard/recolector/aside/acercade.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
   <link rel="shortcut icon" href="/img/logo-icon.png">
@@ -32,7 +30,7 @@
       <ul>
         <li><a href="/dashboard/recolector/inicio.html">Inicio</a></li>
         <li><a href="/dashboard/recolector/entregas.html">Entregas</a></li>
-        <li><a href="/dashboard/recolector/rutas.html" class="active">Rutas</a></li>
+        <li><a href="/dashboard/recolector/rutas.html">Rutas</a></li>
         <li><a href="/dashboard/recolector/incidencias.html">Incidencias</a></li>
       </ul>
     </nav>
@@ -52,43 +50,42 @@
       <h3 class="sidebar-title">Opciones</h3>
       <ul class="sidebar-menu">
         <li><a href="/dashboard/recolector/aside/perfil.html"><i class="fa-solid fa-id-card"></i> Perfil</a></li>
-        <li><a href="/dashboard/recolector/aside/puntos-verdes.html"><i class="fa-solid fa-seedling"></i> Puntos Verdes</a></li>
+        <li><a href="/dashboard/recolector/aside/puntos-verdes.html"><i class="fa-solid fa-seedling"></i> Puntos
+            Verdes</a></li>
         <li><a href="/dashboard/recolector/aside/reportes.html"><i class="fa-solid fa-file-alt"></i> Reportes</a></li>
         <li><a href="/dashboard/recolector/aside/ayuda.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a></li>
-        <li><a href="/dashboard/recolector/aside/acercade.html"><i class="fa-solid fa-leaf"></i> Acerca de</a></li>
+        <li><a href="/dashboard/recolector/aside/acercade.html" class="active"><i class="fa-solid fa-leaf"></i> Acerca
+            de</a></li>
       </ul>
     </aside>
 
     <!-- Contenido principal -->
     <main class="dashboard-content">
       <div class="content-header">
-        <h2>Rutas de Recolección</h2>
-        <p>Consulta y administra tus rutas de recolección asignadas.</p>
+        <h2>Acerca de Puntos Verdes</h2>
+        <p>Información sobre la plataforma, su propósito y el equipo detrás del proyecto.</p>
       </div>
 
-      <div class="cards-grid">
+      <div class="acercade-cards">
         <div class="card">
-          <i class="fa-solid fa-route"></i>
-          <h3>Ruta Norte</h3>
-          <p>Sector: San Isidro, La Victoria</p>
-          <p>Estado: Activa</p>
-          <button class="btn-editar"><i class="fa-solid fa-pen"></i> Editar Ruta</button>
+          <i class="fa-solid fa-leaf"></i>
+          <h3>Propósito</h3>
+          <p>La plataforma Puntos Verdes busca incentivar el reciclaje y la correcta gestión de residuos en la ciudad,
+            conectando ciudadanos con recolectores y promoviendo prácticas sostenibles.</p>
         </div>
 
         <div class="card">
-          <i class="fa-solid fa-route"></i>
-          <h3>Ruta Sur</h3>
-          <p>Sector: Miraflores, Barranco</p>
-          <p>Estado: Completada</p>
-          <button class="btn-editar"><i class="fa-solid fa-pen"></i> Editar Ruta</button>
+          <i class="fa-solid fa-users"></i>
+          <h3>Equipo</h3>
+          <p>El proyecto está desarrollado por un equipo académico de Certus, con la participación de expertos en
+            desarrollo web, gestión de residuos y experiencia del usuario.</p>
         </div>
 
         <div class="card">
-          <i class="fa-solid fa-route"></i>
-          <h3>Ruta Este</h3>
-          <p>Sector: San Juan, Lince</p>
-          <p>Estado: Pendiente</p>
-          <button class="btn-editar"><i class="fa-solid fa-pen"></i> Editar Ruta</button>
+          <i class="fa-solid fa-solid fa-globe"></i>
+          <h3>Futuro</h3>
+          <p>Se planea seguir expandiendo la plataforma, agregando nuevas funcionalidades como reportes automatizados,
+            geolocalización de puntos de reciclaje y programas de incentivos para usuarios.</p>
         </div>
       </div>
     </main>

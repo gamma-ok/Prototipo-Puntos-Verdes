@@ -60,11 +60,11 @@ body {
 }
 
 .dashboard-navbar ul li a {
-  position: relative;
   color: #fff;
   font-weight: 500;
   text-decoration: none;
   padding-bottom: 4px;
+  position: relative;
   transition: color 0.3s;
 }
 
@@ -181,118 +181,83 @@ body {
   border-left: 4px solid #8ab900;
 }
 
-/* ====== PERFIL HEADER ====== */
-.perfil-header {
-  margin: 2rem 2rem 1.5rem 2rem; /* espacio superior respecto al navbar y lados */
+/* ====== CONTENIDO ====== */
+.dashboard-content {
+  padding: 2rem;
 }
 
-.perfil-header h2 {
-  margin: 0 0 0.3rem 0;
+.content-header h2 {
   color: #004080;
+  margin-bottom: 0.5rem;
 }
 
-.perfil-header p {
-  margin: 0;
+.content-header p {
   color: #555;
+  margin-bottom: 2rem;
 }
 
-/* ====== PERFIL ====== */
-.perfil-container {
+/* ====== CARDS ====== */
+.cards-grid {
   display: grid;
-  grid-template-columns: 3fr 1fr; /* formulario 3/4 y card 1/4 */
-  gap: 2rem;
-  align-items: start;
-  margin: 0 2rem 2rem 2rem; /* margen lateral para que no esté pegado a los bordes */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
 }
 
-.perfil-form {
+.card {
   background: #fff;
   padding: 2rem;
   border-radius: 14px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-}
-
-.perfil-form .form-group {
-  margin-bottom: 1.2rem;
-}
-
-.perfil-form label {
-  display: block;
-  font-weight: 500;
-  margin-bottom: 0.4rem;
-  color: #004080;
-}
-
-.perfil-form input {
-  width: 97%;
-  padding: 0.8rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  outline: none;
-  transition: border 0.3s, box-shadow 0.3s;
-}
-
-.perfil-form input:focus {
-  border: 1px solid #004080;
-  box-shadow: 0 0 6px rgba(0,64,128,0.3);
-}
-
-.btn-guardar {
-  display: inline-block;
-  background: #8ab900;
-  color: #fff;
-  border: none;
-  padding: 0.9rem 1.5rem;
-  border-radius: 30px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.btn-guardar:hover {
-  background: #6f9205;
-}
-
-.perfil-card {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 14px;
   text-align: center;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
 }
 
-.perfil-card .perfil-foto {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  border: 4px solid #8ab900;
-  margin-bottom: 1rem;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.perfil-card h3 {
-  color: #004080;
+.card i.fa-route {
+  font-size: 2rem;
+  color: #8ab900;
+  margin-bottom: 0.8rem;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  color: #003366;
   margin-bottom: 0.3rem;
 }
 
-.perfil-card p {
+.card p {
+  font-size: 0.95rem;
   color: #555;
-  margin-bottom: 1rem;
 }
 
+/* ====== BOTONES ====== */
 .btn-editar {
+  display: inline-flex;           /* flex horizontal */
+  align-items: center;            /* icono y texto alineados */
+  gap: 0.4rem;                    /* espacio entre icono y texto */
+  justify-content: center;
+  padding: 0.6rem 1.2rem;
+  border-radius: 30px;
   background: #004080;
   color: #fff;
+  font-weight: 600;
+  font-size: 0.95rem;
   border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 8px;
   cursor: pointer;
-  font-size: 0.9rem;
-  font-weight: 500;
   transition: background 0.3s;
 }
 
 .btn-editar:hover {
   background: #003366;
+}
+
+.btn-editar i {
+  font-size: 0.95rem; /* igual que el texto */
+  color: #fff;
+  line-height: 1;
 }
 
 /* ====== FOOTER ====== */

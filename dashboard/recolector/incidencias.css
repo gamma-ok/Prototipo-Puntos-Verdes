@@ -215,7 +215,7 @@ body {
   transform: translateY(-5px);
 }
 
-.card i {
+.card i.fa-triangle-exclamation {
   font-size: 2rem;
   color: #8ab900;
   margin-bottom: 0.8rem;
@@ -230,14 +230,13 @@ body {
 .card p {
   font-size: 0.95rem;
   color: #555;
-  margin-bottom: 0.4rem;
 }
 
 /* ====== BOTONES ====== */
 .btn-editar {
-  display: inline-flex;           /* flex horizontal */
-  align-items: center;            /* icono y texto alineados */
-  gap: 0.4rem;                    /* espacio entre icono y texto */
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   justify-content: center;
   padding: 0.6rem 1.2rem;
   border-radius: 30px;

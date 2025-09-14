@@ -4,18 +4,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Puntos Verdes | Entregas</title>
+  <title>Reportes | Dashboard Recolector</title>
 
-  <link rel="stylesheet" href="/dashboard/recolector/entregas.css">
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  <link rel="stylesheet" href="/dashboard/recolector/aside/reportes.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
 
   <link rel="shortcut icon" href="/img/logo-icon.png">
@@ -31,7 +29,7 @@
     <nav class="nav-center">
       <ul>
         <li><a href="/dashboard/recolector/inicio.html">Inicio</a></li>
-        <li><a href="/dashboard/recolector/entregas.html" class="active">Entregas</a></li>
+        <li><a href="/dashboard/recolector/entregas.html">Entregas</a></li>
         <li><a href="/dashboard/recolector/rutas.html">Rutas</a></li>
         <li><a href="/dashboard/recolector/incidencias.html">Incidencias</a></li>
       </ul>
@@ -45,15 +43,17 @@
     </div>
   </header>
 
-  <!-- Layout con aside -->
+  <!-- Layout -->
   <div class="dashboard-layout">
     <!-- Aside -->
     <aside class="sidebar">
       <h3 class="sidebar-title">Opciones</h3>
       <ul class="sidebar-menu">
         <li><a href="/dashboard/recolector/aside/perfil.html"><i class="fa-solid fa-id-card"></i> Perfil</a></li>
-        <li><a href="/dashboard/recolector/aside/puntos-verdes.html"><i class="fa-solid fa-seedling"></i> Puntos Verdes</a></li>
-        <li><a href="/dashboard/recolector/aside/reportes.html"><i class="fa-solid fa-file-alt"></i> Reportes</a></li>
+        <li><a href="/dashboard/recolector/aside/puntos-verdes.html"><i class="fa-solid fa-seedling"></i> Puntos
+            Verdes</a></li>
+        <li><a href="/dashboard/recolector/aside/reportes.html" class="active"><i
+              class="fa-solid fa-file-alt"></i> Reportes</a></li>
         <li><a href="/dashboard/recolector/aside/ayuda.html"><i class="fa-solid fa-circle-question"></i> Ayuda</a></li>
         <li><a href="/dashboard/recolector/aside/acercade.html"><i class="fa-solid fa-leaf"></i> Acerca de</a></li>
       </ul>
@@ -62,50 +62,54 @@
     <!-- Contenido principal -->
     <main class="dashboard-content">
       <div class="content-header">
-        <h2>Entregas Registradas</h2>
-        <p>Consulta y gestiona las entregas realizadas en tu zona.</p>
+        <h2>Reportes</h2>
+        <p>Revisa el historial de reportes de incidencias y la recolección de residuos.</p>
       </div>
 
-      <div class="entregas-container">
-        <table class="entregas-table">
+      <!-- Filtro de búsqueda o fecha -->
+      <div class="report-filters">
+        <input type="text" placeholder="Buscar reporte..." class="input-search">
+        <input type="date" class="input-date">
+        <button class="btn-guardar"><i class="fa-solid fa-filter"></i> Filtrar</button>
+      </div>
+
+      <!-- Tabla de reportes -->
+      <div class="report-table">
+        <table>
           <thead>
             <tr>
-              <th>#</th>
-              <th>Fecha</th>
+              <th>ID</th>
+              <th>Punto Verde</th>
               <th>Tipo de Residuos</th>
-              <th>Peso</th>
-              <th>Zona</th>
               <th>Estado</th>
+              <th>Fecha</th>
               <th>Acciones</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>1</td>
+              <td>001</td>
+              <td>Punto Verde 001</td>
+              <td>Plásticos</td>
+              <td>Pendiente</td>
+              <td>13/09/2025</td>
+              <td><button class="btn-editar"><i class="fa-solid fa-eye"></i> Ver</button></td>
+            </tr>
+            <tr>
+              <td>002</td>
+              <td>Punto Verde 002</td>
+              <td>Papel y Cartón</td>
+              <td>En Proceso</td>
               <td>12/09/2025</td>
-              <td>Plástico</td>
-              <td>5 kg</td>
-              <td>Zona A</td>
-              <td><span class="estado-pendiente">Pendiente</span></td>
-              <td><button class="btn-editar"><i class="fa-solid fa-pen"></i> Editar</button></td>
+              <td><button class="btn-editar"><i class="fa-solid fa-eye"></i> Ver</button></td>
             </tr>
             <tr>
-              <td>2</td>
+              <td>003</td>
+              <td>Punto Verde 003</td>
+              <td>Orgánicos</td>
+              <td>Completado</td>
               <td>11/09/2025</td>
-              <td>Cartón</td>
-              <td>8 kg</td>
-              <td>Zona B</td>
-              <td><span class="estado-completado">Completado</span></td>
-              <td><button class="btn-editar"><i class="fa-solid fa-pen"></i> Editar</button></td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>10/09/2025</td>
-              <td>Vidrio</td>
-              <td>3 kg</td>
-              <td>Zona C</td>
-              <td><span class="estado-pendiente">Pendiente</span></td>
-              <td><button class="btn-editar"><i class="fa-solid fa-pen"></i> Editar</button></td>
+              <td><button class="btn-editar"><i class="fa-solid fa-eye"></i> Ver</button></td>
             </tr>
           </tbody>
         </table>

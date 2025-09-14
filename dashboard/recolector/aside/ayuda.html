@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ayuda | Dashboard Recolector</title>
+
+  <link rel="stylesheet" href="/dashboard/recolector/aside/ayuda.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <link rel="shortcut icon" href="/img/logo-icon.png">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <header class="dashboard-navbar">
+    <div class="nav-left">
+      <img src="/img/dashboard-logo-puntos-verdes.png" alt="Logo Puntos Verdes" class="logo-img">
+      <h1>Dashboard Recolector</h1>
+    </div>
+    <nav class="nav-center">
+      <ul>
+        <li><a href="/dashboard/recolector/inicio.html">Inicio</a></li>
+        <li><a href="/dashboard/recolector/entregas.html">Entregas</a></li>
+        <li><a href="/dashboard/recolector/rutas.html">Rutas</a></li>
+        <li><a href="/dashboard/recolector/incidencias.html">Incidencias</a></li>
+      </ul>
+    </nav>
+    <div class="nav-right">
+      <div class="user-menu">
+        <img src="/img/foto-perfil.jpeg" alt="Usuario" class="user-avatar">
+        <span>Santiago Gamarra</span>
+        <a href="logout.html" class="logout"><i class="fa-solid fa-right-from-bracket"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Layout -->
+  <div class="dashboard-layout">
+    <!-- Aside -->
+    <aside class="sidebar">
+      <h3 class="sidebar-title">Opciones</h3>
+      <ul class="sidebar-menu">
+        <li><a href="/dashboard/recolector/aside/perfil.html"><i class="fa-solid fa-id-card"></i> Perfil</a></li>
+        <li><a href="/dashboard/recolector/aside/puntos-verdes.html"><i class="fa-solid fa-seedling"></i> Puntos
+            Verdes</a></li>
+        <li><a href="/dashboard/recolector/aside/reportes.html"><i class="fa-solid fa-file-alt"></i> Reportes</a></li>
+        <li><a href="/dashboard/recolector/aside/ayuda.html" class="active"><i
+              class="fa-solid fa-circle-question"></i> Ayuda</a></li>
+        <li><a href="/dashboard/recolector/aside/acercade.html"><i class="fa-solid fa-leaf"></i> Acerca de</a></li>
+      </ul>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main class="dashboard-content">
+      <div class="content-header">
+        <h2>Ayuda</h2>
+        <p>Encuentra respuestas a las preguntas más frecuentes o contacta al soporte técnico.</p>
+      </div>
+
+      <!-- FAQ -->
+      <section class="faq-section">
+        <h3>Preguntas Frecuentes</h3>
+        <div class="faq">
+          <button class="faq-question">¿Cómo puedo marcar un punto verde como recogido?</button>
+          <div class="faq-answer">
+            <p>En la sección "Puntos Verdes", presiona el botón "Marcar como Recogido" en el punto correspondiente.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <button class="faq-question">¿Cómo reporto un incidente?</button>
+          <div class="faq-answer">
+            <p>Ve a la sección "Reportes" y completa el formulario de incidente para registrar cualquier problema.</p>
+          </div>
+        </div>
+
+        <div class="faq">
+          <button class="faq-question">¿A quién contacto si tengo problemas con la app?</button>
+          <div class="faq-answer">
+            <p>Envía un correo a soporte@puntosverdes.com o utiliza el formulario de contacto a continuación.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Formulario de contacto -->
+      <section class="contact-section">
+        <h3>Contacto</h3>
+        <form class="contact-form">
+          <div class="form-group">
+            <label>Nombre</label>
+            <input type="text" placeholder="Tu nombre">
+          </div>
+          <div class="form-group">
+            <label>Correo Electrónico</label>
+            <input type="email" placeholder="correo@ejemplo.com">
+          </div>
+          <div class="form-group">
+            <label>Mensaje</label>
+            <textarea placeholder="Escribe tu mensaje..."></textarea>
+          </div>
+          <button type="submit" class="btn-guardar"><i class="fa-solid fa-paper-plane"></i> Enviar Mensaje</button>
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Plataforma de Reciclaje y Puntos Verdes | Proyecto académico - Certus</p>
+  </footer>
+
+  <!-- Script FAQ -->
+  <script>
+    const faqs = document.querySelectorAll('.faq-question');
+    faqs.forEach(faq => {
+      faq.addEventListener('click', () => {
+        faq.nextElementSibling.classList.toggle('show');
+        faq.classList.toggle('active');
+      });
+    });
+  </script>
+</body>
+
+</html>
